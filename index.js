@@ -4,6 +4,8 @@ const Discord = require("discord.js");
 const ytdl = require("ytdl-core");
 // const ytdl = require('ytdl-core-discord');
 
+const {token} = require("./config.json")
+
 // discordに接続するための、初期設定
 const client = new Discord.Client();
 
@@ -109,7 +111,7 @@ client.on("message", (message) => {
 });
 
 // discordにログインする
-client.login("NzI2MjQ0NTY0OTc2Nzk1NzQ5.XwkW0Q.b_5_BdfS62yrxzC5oCBVd5-dPWs");
+client.login(token);
 
 ("use strict");
 // key: タスクの文字例 value; 完了しているかどうかの真偽値
