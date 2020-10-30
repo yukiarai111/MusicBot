@@ -47,18 +47,6 @@ client.on("message", (message) => {
         // voicechannelを取得
         const voiceChannel = message.member.voice.channel;
 
-        // var song = {
-        //     name: "aiueo",
-        // 	url: "https://youtu.be/bt8wNQJaKAk",
-        // };
-        // playlist.push(song);
-
-        // song = {
-        //     name: "hello",
-        //     url: "https://youtu.be/TQ8WlA2GXbk",
-        // };
-        // playlist.push(song);
-
         // voicechannelがなかったらエラー
         if (!voiceChannel) {
             return message.reply("please join a voice channel first!");
@@ -76,37 +64,6 @@ client.on("message", (message) => {
             }
         });
 
-        //     // voicechannelに取得できたら、下記を実行
-        //     voiceChannel.join().then((connection) => {
-        //         //for (var i = 0; i < playlist.length; i++) {
-        //         // 音楽が再生されていなかったら下記を実行
-        //         if (!isplaying) {
-        //             // youtubeから音声を取得
-        //             stream = ytdl(playlist[i].url, { filter: "audioonly" });
-        //             // 音楽を再生
-        //             dispatcher = connection.play(stream);
-        //             // 音楽が再生されているというフラグを立てる
-        //             isplaying = true;
-        //             dispatcher.setVolume(0.8);
-        //         }
-
-        //         // !pauseが送られてきたら、一時停止する
-        //         if (messagetolist[0] === "!pause") {
-        //             dispatcher.pause();
-        //         }
-        //         // !resumeが送られてきたら、再再生する
-        //         if (messagetolist[0] === "!resume") {
-        //             dispatcher.resume();
-        //         }
-
-        //         // 音楽の再生が終わったら、再生フラグを下ろし、voicechannelを離れる。
-        //         dispatcher.on("finish", () => {
-        //             isplaying = false;
-        //             // i++;
-        //             voiceChannel.leave();
-        //         });
-        //         // }
-        //     });
     }
 });
 
@@ -170,27 +127,7 @@ function getNotPlayedList(playlist) {
         }
     }
     console.log(notPlayedList);
-    //         // tasksを配列に直し、DoneTasksに代入
-    //         var DoneTasks = Array.from(tasks);
-    //         // DoneTasksを表示
-    //         // console.log(DoneTasks);
-    //         // DoneTasksの各要素がfalseとセットになっていたら、lstに追加
-    //         // [ [ 'gegiugeivg', false ], [ 'world', true ], [ 'earth', false ] ]
-    //         // -> lst = [[ 'gegiugeivg', false ], [ 'earth', false ]]
-    //         lst = DoneTasks.filter((t) => t[1] == false);
-    //         // lstを表示
-    //         // console.log(lst);
-
-    //         doneTasks = DoneTasks.filter((t) => t[1] == true);
-    //         // console.log(doneTasks);
-    //         // [ [ 'gegiugeivg', false ], [ 'world', true ], [ 'earth', true ] ]
-    //         // [[ 'world', true ]]
-    //         doneTasks = doneTasks.map((t) => t[0]);
-    //         // console.log(doneTasks);
-    //         // doneTasks = ["word"]
-
-    //         tasks.delete("gegiugeivg");
-    //         // console.log(tasks);
+   
 }
 function play(connection, song, voiceChannel) {
     if (!song) {

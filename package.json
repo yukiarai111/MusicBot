@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.3.2",
-    "discord.js": "^12.2.0",
-    "ytdl-core": "^3.1.2",
-    "ytdl-core-discord": "^1.2.3"
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.4.1",
+    "ytdl-core": "^3.4.2",
+    "ytdl-core-discord": "^1.2.4"
   },
   "devDependencies": {
     "prettier": "2.1.2"
